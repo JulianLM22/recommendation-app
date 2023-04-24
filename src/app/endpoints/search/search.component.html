@@ -1,7 +1,7 @@
 <h5>Buscar:</h5>
 <!-- (keyup): eventos del teclado -->
-<input type="text" class="form-control" placeholder="Buscar recomendaciones por identificación"
+<input type="text" class="form-control" [(ngModel)]="text" placeholder="Escriba la identificación del cliente"
 #Buscar/><br/>
-<input type="number" class="form-control" placeholder="Buscar recomendaciones por identificación"
-#BuscarCan/><br/>
+<input type="number" class="form-control" placeholder="Escriba la cantidad de productos que quiere recomendar"
+#BuscarCan [(ngModel)]="text2"/><br/>
 <button class="btn btn-success" (click)="buscar()">buscar</button>
