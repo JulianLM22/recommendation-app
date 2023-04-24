@@ -1,0 +1,12 @@
+<div class="row">
+  <!-- ngFor para recorrer todos los gifs buscados -->
+  <div *ngFor="let i of resultados" class="col-md-4 col-sm-6 animate__animated animate__fadeIn">
+    <div class="card">
+      <div class="card-body">
+        <p class="car-text">
+          {{i.item_name}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
