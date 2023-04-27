@@ -12,5 +12,9 @@ export class ResultsComponent {
     return this.endpointsService.resultados;
   }
 
+  get data(){
+    return this.endpointsService.data;
+  }
+
   constructor(private endpointsService: EndpointsService) { }
 }
