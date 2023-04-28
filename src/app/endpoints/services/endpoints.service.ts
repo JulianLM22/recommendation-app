@@ -1,7 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Data, Prediction } from '../interface/predictions.interface';
-import { SearchComponent } from '../search/search.component';
 
 @Injectable({
   providedIn: 'root',

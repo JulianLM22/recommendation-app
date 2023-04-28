@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { EndpointsService } from '../services/endpoints.service';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Data, General, Prediction } from '../interface/predictions.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
