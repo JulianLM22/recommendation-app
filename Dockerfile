@@ -1,23 +1,22 @@
 #Image node
-FROM node:18-alpine AS build
+FROM node:latest AS build
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy source code
+COPY . /app
 
 # Install dependencies
-RUN npm ci
-
-# Copy source code
-COPY . .
+RUN npm install
 
 # Build app
 RUN npm run build
 
-# Expose port 4200
-EXPOSE 4200
+FROM nginx:latest
 
-# Run app
-CMD ["npm", "start"]
+COPY --from=build /app/dist/recommendation-app/ /usr/share/nginx/html
+
+# Expose port 4200
+EXPOSE 80
+

@@ -43,7 +43,7 @@ export class SearchComponent implements OnInit{
   buscarPorId = (query: string) => {
     query = query.trim();
 
-    const servicioUrl: string = 'http://127.0.0.1:9000/predict';
+    const servicioUrl: string = 'http://127.0.0.1:5000/predict';
     const body = {
       user_id: String(this.text),
       item_id: Number(this.text2),
@@ -61,7 +61,7 @@ export class SearchComponent implements OnInit{
   buscarData = (query: string) => {
     query = query.trim();
 
-    const servicioUrl: string = 'http://127.0.0.1:9000/client';
+    const servicioUrl: string = 'http://127.0.0.1:5000/client';
     const body = {
       user_id: String(this.text)
     };
